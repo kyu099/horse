@@ -30,7 +30,7 @@ changebutton.onclick = () => {
     out2.innerHTML = num2.rem + 1;
     out3.innerHTML = num3.rem + 1;
 
-    if(score.value < 0 || score.value.includes(".")) {
+    if(score.value < 1 || score.value.includes(".")) {
         alert("スコアは正の整数を入力してください");
         out1.innerHTML = out2.innerHTML = out3.innerHTML = "";
     }
