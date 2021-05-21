@@ -1,0 +1,15 @@
+body{
+    text-align: center;
+}
+
+button{
+    margin: 1rem;
+}
+
+.box1,.box2,.box3{
+    display: inline-block;
+    vertical-align: middle;
+    width: 2em;
+    height: 1.5em;
+    border: solid 3px #000;
+}
