@@ -30,12 +30,12 @@ changebutton.onclick = () => {
     out2.innerHTML = num2.rem + 1;
     out3.innerHTML = num3.rem + 1;
 
-    if(score.value < 1 || score.value.includes(".")) {
-        alert("スコアは正の整数を入力してください");
+    if(score.value < 0 || score.value.includes(".")) {
+        alert("スコアは0以上の整数を入力してください");
         out1.innerHTML = out2.innerHTML = out3.innerHTML = "";
     }
 
-    if(num.value < 0 || num.value > 18 || num.value.includes(".")){
+    if(num.value < 1 || num.value > 18 || num.value.includes(".")){
         alert("頭数は18以下の正の整数を入力してください");
         out1.innerHTML = out2.innerHTML = out3.innerHTML = "";
     }
