@@ -22,6 +22,14 @@ function compare(a,b){
     return a - b;
 }
 
+function print_results(num1, num2){
+    const n = [num1, num2];
+        n.sort(compare);
+        output.innerHTML = `<tr><td>馬単</td><td>${num1+1} > </td><td>${num2+1}</td></tr>\
+        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>\
+        <tr><td>ワイド</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>`;
+}
+
 changebutton.onclick = () => {
     let num1, num2, num3;
     output.innerHTML = ""
@@ -42,27 +50,15 @@ changebutton.onclick = () => {
     }
 
     else if(num1.rem === num2.rem) {
-        const n = [num1.rem, num3.rem];
-        n.sort(compare);
-        output.innerHTML = `<tr><td>馬単</td><td>${num1.rem+1} > </td><td>${num3.rem+1}</td></tr>\
-        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>\
-        <tr><td>ワイド</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>`;
+        print_results(num1.rem, num3.rem);
     }
 
     else if(num1.rem === num3.rem) {
-        const n = [num1.rem, num2.rem];
-        n.sort(compare);
-        output.innerHTML = `<tr><td>馬単</td><td>${num1.rem+1} > </td><td>${num2.rem+1}</td></tr>\
-        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>\
-        <tr><td>ワイド</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>`;
+        print_results(num1.rem, num2.rem);
     }
 
     else if(num3.rem === num2.rem) {
-        const n = [num1.rem, num2.rem];
-        n.sort(compare);
-        output.innerHTML = `<tr><td>馬単</td><td>${num3.rem+1} > </td><td>${num1.rem+1}</td></tr>\
-        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>\
-        <tr><td>ワイド</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>`;
+        print_results(num1.rem, num2.rem);
     }
 
     else {const n = [num1.rem, num2.rem, num3.rem];
