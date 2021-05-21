@@ -45,8 +45,8 @@ changebutton.onclick = () => {
         const n = [num1.rem, num3.rem];
         n.sort(compare);
         output.innerHTML = `<tr><td>馬単</td><td>${num1.rem+1} > </td><td>${num3.rem+1}</td></tr>\
-        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1].rem+1}</td></tr>\
-        <tr><td>ワイド</td><td>${n[0].rem+1}</td><td>${n[1].rem+1}</td></tr>`;
+        <tr><td>馬連</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>\
+        <tr><td>ワイド</td><td>${n[0]+1}</td><td>${n[1]+1}</td></tr>`;
     }
 
     else if(num1.rem === num3.rem) {
